@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 786986461513.dkr.ecr.ap-southeast-2.amazonaws.com/youtube
-      - printf '{"name":"helloWorld","imageUri":"%s"}' 786986461513.dkr.ecr.ap-southeast-2.amazonaws.com/youtube > imagedefinitions.json
+      - printf '[{"name":"helloWorld","imageUri":"%s"}]' 786986461513.dkr.ecr.ap-southeast-2.amazonaws.com/youtube > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
